@@ -7,10 +7,13 @@
  *
  */
 package com.example.school.controller;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import com.example.school.model.Student;
 import com.example.school.service.StudentH2Service;
+
 import java.util.*;
 
 @RestController

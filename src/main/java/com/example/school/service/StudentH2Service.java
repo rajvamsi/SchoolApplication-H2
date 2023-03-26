@@ -11,12 +11,16 @@
 
 // Write your code here
 package com.example.school.service;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
+
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.http.HttpStatus;
+
 import java.util.*;
+
 import com.example.school.model.Student;
 import com.example.school.model.StudentRowMapper;
 import com.example.school.repository.StudentRepository;
@@ -73,7 +77,7 @@ public class StudentH2Service implements StudentRepository {
         if (student.getGender() != null) {
             db.update("update student set gender = ? where studentId = ?", student.getGender(), studentId);
         }
-        if (student.getStandard() != null) {
+        if (student.getStandard() != 0) {
             db.update("update student set standard = ? where studentId = ?", student.getStandard(), studentId);
         }
 

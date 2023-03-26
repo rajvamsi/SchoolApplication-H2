@@ -9,6 +9,7 @@
 
 // Write your code here
 package com.example.school.model;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
@@ -19,7 +20,7 @@ public class StudentRowMapper implements RowMapper<Student> {
             rs.getInt("studentId"),
             rs.getString("studentName"),
             rs.getString("gender"),
-            rs.getString("standard")
+            rs.getInt("standard")
         );
     }
 }

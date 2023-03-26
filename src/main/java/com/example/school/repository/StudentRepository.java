@@ -1,6 +1,8 @@
 // Write your code here
 package com.example.school.repository;
+
 import com.example.school.model.Student;
+
 import java.util.*;
 
 public interface StudentRepository {
